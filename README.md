@@ -23,6 +23,7 @@ it should be in the same order as the merging order in step 5.
 13. Also, make the variable names meaningful by removing un-necessary braces and hyphens. 
 14. Use reshape2 library and melt the dataset to group data by Activity and Subject variables. 
 15. Use dcast to calculate mean of all variables in the molten data and this will create a wide tidy dataset. 
+16. The output data is available in tidy.txt
 
 
 
