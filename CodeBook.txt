@@ -1,0 +1,75 @@
+1) Data Source
+
+This data analysis experiment uses the raw data provided in the project archive file downloaded from Coursera. 
+
+2) Raw Data
+
+The raw data that is used in the analysis are the following files:-
+
+a) activity_labels.txt - This file is used to derive the Activity names corresponding to the activity codes. 
+b) features.txt - This file is used to derive the variable names of all the 561 columns of the data.
+c) test/subject_test.txt - This file is used to derive the subject id corresponding to each row of activity. 
+d) test/X_test.txt - This file is used to get all the test data for 561 different variables captured for each activity. 
+e) test/Y_test.txt - This file is used to get all the activities done by the subjects. 
+f) train/subject_train.txt - This file is used to derive the subject id corresponding to each row of activity. This is the training set.
+g) train/X_train.txt - This file is used to get all the training data for 561 different variables captured for each activity. 
+h) train/Y_train.txt - This file is used to get all the activities done by the subjects. This is the training set.
+
+3) Processed Data
+The processed data gives the average value of certain (mean and standard deviation variables only) feature variables for each activity and each subject. 
+This is how the processed datat was obtained. 
+The training and the test data set for all feature variables (d & g) have been merged together to get single data set. 
+To this data set, added the subject and activity data (c,f,e,h) so that all variables are mapped against activity and the subject who did the activity. 
+Replaced the activity id with the activity name by using the activity_labels.txt file. 
+Derived only the 'mean' and 'Standard Deviation' variables from the whole data set as per the project requirements. 
+Finally, melted the wide data to derive all the variabes in one column and then grouped the data by Activity and Subject and derived the 
+average value for all the variables. 
+
+4) Field Names
+Activity - This field denotes the various activities that were done using the smartphone. 
+Possible Values are:-
+WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+
+Subject - This field specifies the id of the person who did the activity. Values range from 1-30
+
+tBodyAccmeanX(YZ) - This variable gives the average body acceleration value for an activity for each subject in time domain in various directions - X,Y,Z. So, there are 3 variables in all for all the 3 directions. 
+
+tGravityAccmeanX(YZ) - This variable gives the average gravity acceleration value for an activity for each subject in time domain in various directions - X,Y,Z.So, there are 3 variables in all for all the 3 directions.
+
+tBodyAccJerkmeanX(YZ) - This variable gives the average body acceleration Jerk value for an activity for each subject in time domain in various directions - X,Y,Z. So, there are 3 variables in all for all the 3 directions. 
+
+tBodyGyromeanX(YZ) - This variable gives the average body Gyroscope value for an activity for each subject in time domain in various directions - X,Y,Z. So, there are 3 variables in all for all the 3 directions. 
+
+tBodyGyroJerkmeanX(YZ) - This variable gives the average body Jerk Gyroscope value for an activity for each subject in time domain in various directions - X,Y,Z. So, there are 3 variables in all for all the 3 directions. 
+
+tBodyAccMagmean - This variable gives the average body acceleration magnitude for an activity for each subject in time domain. 
+
+tGravityAccMagmean -  This variable gives the average gravity acceleration magnitude for an activity for each subject in time domain. 
+
+tBodyAccJerkMagmean - This variable gives the average body acceleration jerk magnitude for an activity for each subject in time domain. 
+
+tBodyGyroMagmean - This variable gives the average body Gyro magnitude for an activity for each subject in time domain. 
+
+tBodyGyroJerkMag - This variable gives the average body Gyro Jerk magnitude for an activity for each subject in time domain. 
+
+fBodyAccmeanX(YZ) - This variable gives the average body acceleration value for an activity for each subject in frequency domain in various directions - X,Y,Z. So, there are 3 variables in all for all the 3 directions. 
+
+fGravityAccmeanX(YZ) - This variable gives the average gravity acceleration value for an activity for each subject in frequency domain in various directions - X,Y,Z.So, there are 3 variables in all for all the 3 directions.
+
+fBodyAccJerkmeanX(YZ) - This variable gives the average body acceleration Jerk value for an activity for each subject in frequency domain in various directions - X,Y,Z. So, there are 3 variables in all for all the 3 directions. 
+
+fBodyGyromeanX(YZ) - This variable gives the average body Gyroscope value for an activity for each subject in frequency domain in various directions - X,Y,Z. So, there are 3 variables in all for all the 3 directions. 
+
+fBodyGyroJerkmeanX(YZ) - This variable gives the average body Jerk Gyroscope value for an activity for each subject in frequency domain in various directions - X,Y,Z. So, there are 3 variables in all for all the 3 directions. 
+
+fBodyAccMagmean - This variable gives the average body acceleration magnitude for an activity for each subject in frequency domain. 
+
+fGravityAccMagmean -  This variable gives the average gravity acceleration magnitude for an activity for each subject in frequency domain. 
+
+fBodyAccJerkMagmean - This variable gives the average body acceleration jerk magnitude for an activity for each subject in frequency domain. 
+
+fBodyGyroMagmean - This variable gives the average body Gyro magnitude for an activity for each subject in frequency domain. 
+
+fBodyGyroJerkMag - This variable gives the average body Gyro Jerk magnitude for an activity for each subject in frequency domain. 
+
+For all the variables above there are also the average standard deviation value for an activity for each subject. 
